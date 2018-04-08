@@ -1,0 +1,105 @@
+
+//boolean
+public class Main {
+
+    public static void main(String[] args){
+
+
+        boolean isWeekend = true;
+        // &&
+        boolean shopping = isTodaySunny && isWeekend;
+        // ||
+        boolean isWeekend = false;
+        boolean isOncall = false;
+        boolean isWorking = isWeekday || isOncall;
+        //
+        boolean handsome = true;
+        handsome =! handsome;
+        //means you just apply the contract boolean value to the orginal variable
+        System.out.println(handsome)
+        //javascript printout function
+
+        //joking problem: female and male problem
+        boolean female = true;
+        double score = 3.5;// int
+        boolean pass = (female && score >= 3.0) || (!female && score >= 4.0)
+        //equal to:
+            //boolean pass = score >= 4.0 || (female && score >= 3.0)
+        System.out.println(pass);
+        // A && B -> the function is not excecuted at the same time
+        // this means that if A is false, B will not be excecuted
+        // this means that for computer: A && B is not equal to B && A
+        //the order of the ranking
+        // ! > && > ||
+
+
+}
+// char use''//remember to use ; at the end of the js
+
+public class Main {
+
+    public static void main(String[] args){
+
+        char a = 'a';
+        int b = (int)a;//change the char to int using (int)
+        // in ASCII every character has its own number presentation
+        //three ASCII to remember : a =97; A == 65; 0 == 48
+        char c = '0';
+        int d = (int)c;
+
+        System.out.println(b);
+        System.out.println(d);
+    }
+
+}
+// char use''
+//about the unicode transfer
+
+public class Main {
+
+    public static void main(String[] args){
+
+        char a = 'c';
+        char next = (char)(a + 1);// now the a will be transferred to 97 and add on 1, then make it a char
+        System.out.println(next);
+        int delta = 'a' - 'b';
+        System.out.println(delta);
+
+        //how about chinese? //check the unicode table
+        char f = '初'；
+        System.out.println(int(f))
+
+        //any code is something in the unicode
+        char g = (char)(23383)；
+        System.out.println(g);
+
+
+        char a = 'a';
+        System.out.println((char)(a-32))//here the 32 is hard code
+        System.out.println((char)(a - 'a'+'A'));//here is much better to understand
+        //Character.toUpperCase(a)
+        // Boolean boolean
+        //Character char
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

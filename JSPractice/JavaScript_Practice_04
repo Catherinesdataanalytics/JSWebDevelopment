@@ -1,0 +1,54 @@
+package com.company;
+//once return the function will be ended
+public class Module1 {
+
+    public static void swap0(int a, int b){
+        //this will not change these values
+        int temp = a;
+        a = b ;
+        b = temp;
+    }
+
+    public static void swap1(int[] array){
+        // arrays can be changed
+        int temp1 = array[0];
+        array[0] = array[2];
+        array[2] = temp1;
+    }
+    //use this to print out
+    public static void main(String[] args) {
+        int a = 20;
+        int b = 40;
+        swap0(a,b);
+        System.out.println(a+" "+b);
+        // this will not change the direction
+        //this is unique in java, be careful, array can be referenced while numbers can not
+
+        int[]array = new int[]{1,2,4};
+        swap1(array);
+        System.out.println(array[0] +" "+array[1]+" "+ array[2]);
+
+    }
+}
+//return
+// void means you do not need to return value in your funcctoion
+// return one
+
+class ResultType{
+    String para1;
+    double parm2;
+    int param3;
+}
+
+//
+
+
+
+
+
+
+
+
+
+
+

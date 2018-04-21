@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Main {
+
+    public static void increment(int a){
+        a++;
+    }
+    public static void increment(IntergerWrapper intW){
+        intW = new IntergerWrapper(20);
+        //intW.integer ++;
+    }
+    public static void main(String[] args){
+        List<Integer> arr1 = new ArrayList<Integer>();
+        ArrayList<Integer> arr2 = new ArrayList<Integer>();
+
+        ArrayList<Integer> intList = new ArrayList<Integer>();
+
+        arr1 = new LinkedList<>();
+        //intergerwrapper
+
+        int a  = 10;
+        IntergerWrapper intW = new IntergerWrapper( 10);
+ 
+        increment(a);
+        increment(intW);
+
+        System.out.println("a:"+a);
+        System.out.println("intW.integer: "+ intW.integer);
+
+    }
+}
+
+class IntergerWrapper{
+    public int integer;
+    public IntergerWrapper(int value){
+        this.integer = value;
+    }
+}

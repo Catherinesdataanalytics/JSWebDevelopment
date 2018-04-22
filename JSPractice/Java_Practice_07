@@ -20,3 +20,69 @@ public class Class {
     }
 }
 //Data Structure
+//linkedList
+//package com.company
+
+//why not public before this?
+//because you can only have one public class and the same as the java name
+
+
+//dummyNode
+class ListNode {
+    public int val;
+    public ListNode next;//link here
+    public ListNode(int value){
+        this.val = value;
+    }
+}
+public class LinkedList{
+
+    ListNode dummy;//add one dummy node
+
+    public LinkedList(){
+        dummy = new ListNode(-1);// the value not matter here
+        //dummy.next=null;
+
+    }
+    public int get(int location){
+        ListNode cur = dummy.next;
+        for (int i=0; i < location; i++){
+
+        }
+        return -1;
+    }
+
+    public boolean contains(int val){
+        ListNode head= dummy.next;
+        while (head != null){
+            if(head.val == val){
+                return true;
+            }
+            head = head.next;
+        }
+        return false;
+    }
+
+    public void add(int location, int val){
+        ListNode pre = dummy;
+        for (int i = 0; i< location; i++){
+            pre = pre.next;
+        }
+        ListNode node = new ListNode(val);//new one was created
+        //elegant-like break and connect
+        node.next = pre.next;
+        pre.next = node;
+
+    }
+
+    public void remove (int location){
+
+        ListNode pre = dummy;
+        for (int i = 0; i < location; i++){
+            pre = pre.next;
+        }
+        pre.next = pre.next.next;//elegant:skip this
+
+    }
+
+}
